@@ -10,11 +10,14 @@ public class BinarySearch {
 	 * @param num
 	 * @param key
 	 * 
-	 * Function searches sorted array of integers, finding the specific number (key)
+	 * Function recursively searches sorted array of integers, finding the specific number (key).
+	 * Search looks at the midpoint of array, checking to see if midpoint is number being sought,
+	 * if not, depending of whether the sought number is greater than, or less than, the midpoint
+	 * the function copies the upper, or lower, half of the array and passes it into a recursive 
+	 * function call.
 	 * 
 	 */
 	public int performSearch(int[] num, int key){
-		System.out.println("num length"+ num.length); 
 		if(num.length == 0){
 			System.out.println("Array empty"); 
 			return 0; 
@@ -22,9 +25,9 @@ public class BinarySearch {
 			int mid; 
 			int number=0; 
 			mid = (num.length)/2; 
-			if(num[mid] == key){
+			if(key == num[mid]){
 				number =  num[mid]; 
-				System.out.println("found" + number); 
+				System.out.println("Found the number " + number); 
 				return number; 
 			}else if((key < num[mid]) && num.length > 1){
 				num = Arrays.copyOfRange(num, 0, mid); 
@@ -50,7 +53,7 @@ public class BinarySearch {
 		int key = 16; 
 		BinarySearch bs = new BinarySearch(); 
 		int index = bs.performSearch(bs.numbers, key); 
-		System.out.println("Number found at index: " + index);
+		System.out.println("Number " + index);
 	}
 
 }
