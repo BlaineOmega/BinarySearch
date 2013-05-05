@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class BinarySearch {
 	
-	public int[] numbers = new int[] {1,2,3,4,5,6,7,8,9,10,11,1,21,3,1,4,15,16,17,18,19,20}; 
+	public int[] numbers = new int[] {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20}; 
 	
 	/**
 	 * @param num
@@ -50,7 +50,7 @@ public class BinarySearch {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int key = 16; 
+		int key = 22; 
 		BinarySearch bs = new BinarySearch(); 
 		int index = bs.performSearch(bs.numbers, key); 
 		System.out.println("Number " + index);
