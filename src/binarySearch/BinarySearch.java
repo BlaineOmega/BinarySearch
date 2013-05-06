@@ -1,7 +1,5 @@
 package binarySearch;
-
-import java.util.Arrays; 
-
+ 
 public class BinarySearch {
 	
 	public int[] numbers = new int[] {1,3,4,5,6,7,8,9,10,11,12,13,14,15,17,18,19,20}; 
